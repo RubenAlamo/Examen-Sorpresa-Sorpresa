@@ -56,13 +56,13 @@ class TestExamen{
 Test de los métodos
 }
 
-Dialogo -- DialogoMac
-Dialogo -- DialogoWindows
+Dialogo --> DialogoMac
+Dialogo --> DialogoWindows
 
-Cliente -- FabricadialogoMac
-Cliente -- FabricadialogoWindows
+Cliente --> FabricadialogoMac
+Cliente --> FabricadialogoWindows
 
-GuiFactory -- MacOsFactory
-GuiFactory -- WindowsFactory
+GuiFactory --> MacOsFactory
+GuiFactory --> WindowsFactory
 
 @enduml
