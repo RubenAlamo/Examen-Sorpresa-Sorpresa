@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class FabricadialogoMac{
+crearDialogo() en mac
+}
+
+abstract class FabricadialogoWindows{
+crearDialogo() en windows
+}
+
+interface Cliente{
+void crearDialogo()
+}
+
+interface Dialogo{
+void dialogo()
+}
+
+class DialogoMac {
+dialogoMac()
+}
+
+class DialogoWindows {
+dialogoWindows()
+}
+
+class Aplicacion{
+private dialogo
+private cliente
+crearDialogo()
+dialogo()
+}
+
+interface GuiFactory{
+crearDialogo()
+crearCliente()
+}
+
+class MacOsFactory{
+crearDialogo() en Mac
+crearCliente() en Mac
+}
+
+class WindowsFactory{
+crearDialogo() en Windows
+crearCliente() en Windows
+}
+
+class Demo{
+configurarAplicacion()
+main()
+}
+
+class TestExamen{
+Test de los métodos
+}
+
+Dialogo -- DialogoMac
+Dialogo -- DialogoWindows
+
+Cliente -- FabricadialogoMac
+Cliente -- FabricadialogoWindows
+
+GuiFactory -- MacOsFactory
+GuiFactory -- WindowsFactory
+
+@enduml
